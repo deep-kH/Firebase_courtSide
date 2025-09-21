@@ -49,7 +49,7 @@ export default function SignUpPage() {
         createdAt: serverTimestamp(),
       });
 
-      router.push('/profile');
+      router.push('/dashboard');
     } catch (error: any) {
       toast({
         title: "Sign-up Failed",

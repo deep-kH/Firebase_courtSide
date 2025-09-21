@@ -34,7 +34,7 @@ export default function LoginPage() {
     try {
       await setPersistence(auth, browserLocalPersistence);
       await signInWithEmailAndPassword(auth, email, password);
-      router.push('/profile');
+      router.push('/dashboard');
     } catch (error: any) {
       toast({
         title: "Login Failed",
@@ -52,7 +52,7 @@ export default function LoginPage() {
     try {
         await setPersistence(auth, browserLocalPersistence);
         await signInWithPopup(auth, provider);
-        router.push('/profile');
+        router.push('/dashboard');
     } catch (error: any) {
         toast({
             title: "Google Sign-In Failed",

@@ -8,6 +8,10 @@
 - User Profile Display: Display the logged-in user's profile information (displayName, email, photoURL) on the 'My Profile' page.
 - Logout Functionality: Implement a 'Logout' button that signs the user out using Firebase Authentication and redirects them to the login page.
 - Profile Update: Allow users to update their displayName through a form, reflecting changes in Firebase Auth and Firestore.
+- Facility Browser: Display a grid of facility cards with name, type, image, and status badge.
+- Facility Search: Implement a search bar to filter facilities by name or type.
+- Enhanced Schedule View: Display a timeline interface showing 60-minute time slots for the current day, color-coded based on booking status (available, confirmed, pending).
+- Real-time Schedule Updates: Use a real-time listener to update the schedule instantly when a booking is made elsewhere.
 
 ## Style Guidelines:
 

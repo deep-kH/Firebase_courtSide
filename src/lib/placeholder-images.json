@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "football-field",
+      "description": "A lush green football field under a clear blue sky.",
+      "imageUrl": "https://picsum.photos/seed/1/600/400",
+      "imageHint": "football field"
+    },
+    {
+      "id": "basketball-court",
+      "description": "An outdoor basketball court with a bright orange hoop.",
+      "imageUrl": "https://picsum.photos/seed/2/600/400",
+      "imageHint": "basketball court"
+    },
+    {
+      "id": "tennis-court",
+      "description": "A clay tennis court with a net in the middle.",
+      "imageUrl": "https://picsum.photos/seed/3/600/400",
+      "imageHint": "tennis court"
+    },
+    {
+      "id": "swimming-pool",
+      "description": "A clear blue swimming pool with lane lines.",
+      "imageUrl": "https://picsum.photos/seed/4/600/400",
+      "imageHint": "swimming pool"
+    },
+    {
+      "id": "badminton-court",
+      "description": "An indoor badminton court with wooden flooring.",
+      "imageUrl": "https://picsum.photos/seed/5/600/400",
+      "imageHint": "badminton court"
+    },
+    {
+      "id": "gymnasium",
+      "description": "A modern gym with various workout equipment.",
+      "imageUrl": "https://picsum.photos/seed/6/600/400",
+      "imageHint": "gym equipment"
+    },
+    {
+      "id": "volleyball-court",
+      "description": "A sand volleyball court on a sunny day.",
+      "imageUrl": "https://picsum.photos/seed/7/600/400",
+      "imageHint": "volleyball court"
+    },
+    {
+      "id": "table-tennis",
+      "description": "A table tennis table with paddles and a ball.",
+      "imageUrl": "https://picsum.photos/seed/8/600/400",
+      "imageHint": "table tennis"
+    }
+  ]
 }

@@ -3,7 +3,6 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/hooks/useAuth';
-import { Skeleton } from '@/components/ui/skeleton';
 
 export default function Home() {
   const { user, loading } = useAuth();
@@ -12,7 +11,7 @@ export default function Home() {
   useEffect(() => {
     if (!loading) {
       if (user) {
-        router.push('/profile');
+        router.push('/dashboard');
       } else {
         router.push('/login');
       }
