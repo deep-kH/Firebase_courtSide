@@ -12,6 +12,14 @@
 - Facility Search: Implement a search bar to filter facilities by name or type.
 - Enhanced Schedule View: Display a timeline interface showing 60-minute time slots for the current day, color-coded based on booking status (available, confirmed, pending).
 - Real-time Schedule Updates: Use a real-time listener to update the schedule instantly when a booking is made elsewhere.
+- Dynamic Booking Modal: Modal for creating new bookings with options for sharing preference and cooldown management.
+- My Bookings Dashboard: Dashboard to view confirmed, pending, upcoming, and past bookings.
+- Interest Hub Integration: Automatically create a social media style post when a booking is created for a sport requiring multiple players.
+- Interest Hub Activity Feed: Display posts in reverse chronological order, with filters, showing facility/time, author, and the Join Game CTA.
+- Join Game Functionality: Allow users to join games. Check for scheduling conflicts, add users to bookings, confirm bookings once minimum player counts are met.  A backend tool is used to increment player counts and update statuses.
+- Team Management: Allow users to create a new team, giving it a name and selecting a sport. The creator is automatically an admin. Display a list of teams the user is a member of. If the user is a team admin, provide an interface to manage the roster (invite/remove members).
+- Team Booking Workflow: Upon selecting a team, the system should automatically fetch the team's member list from the teams/{teamId}/members subcollection. These members are then automatically added to the booking's participants list.
+- Fault Tolerance & UX Polish: Implement loading states, empty states, and error handling.
 
 ## Style Guidelines:
 

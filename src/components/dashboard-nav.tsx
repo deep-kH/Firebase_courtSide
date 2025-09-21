@@ -1,12 +1,16 @@
+
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { LayoutGrid, User } from "lucide-react";
+import { LayoutGrid, User, CalendarCheck, Flame, Users } from "lucide-react";
 
 const links = [
   { name: "Facilities", href: "/dashboard", icon: LayoutGrid },
+  { name: "My Bookings", href: "/dashboard/bookings", icon: CalendarCheck },
+  { name: "Interest Hub", href: "/dashboard/hub", icon: Flame },
+  { name: "My Teams", href: "/dashboard/teams", icon: Users },
   { name: "My Profile", href: "/dashboard/profile", icon: User },
 ];
 
@@ -16,7 +20,7 @@ export function DashboardNav() {
   return (
     <nav className="grid items-start gap-2">
       {links.map((link, index) => {
-        const isActive = pathname === link.href;
+        const isActive = pathname.startsWith(link.href) && (link.href !== '/dashboard' || pathname === '/dashboard');
         return (
           <Link
             key={index}

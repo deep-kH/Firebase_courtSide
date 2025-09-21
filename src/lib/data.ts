@@ -8,6 +8,8 @@ export const facilities: Facility[] = [
     sports: ['Football'],
     image: 'football-field',
     status: 'Available',
+    minPlayers: 10,
+    maxPlayers: 22,
   },
   {
     id: '2',
@@ -16,6 +18,8 @@ export const facilities: Facility[] = [
     sports: ['Basketball'],
     image: 'basketball-court',
     status: 'Available',
+    minPlayers: 4,
+    maxPlayers: 10,
   },
   {
     id: '3',
@@ -24,6 +28,8 @@ export const facilities: Facility[] = [
     sports: ['Tennis'],
     image: 'tennis-court',
     status: 'Maintenance',
+    minPlayers: 2,
+    maxPlayers: 4,
   },
   {
     id: '4',
@@ -32,6 +38,8 @@ export const facilities: Facility[] = [
     sports: ['Swimming'],
     image: 'swimming-pool',
     status: 'Available',
+    minPlayers: 1,
+    maxPlayers: 1,
   },
   {
     id: '5',
@@ -40,6 +48,8 @@ export const facilities: Facility[] = [
     sports: ['Badminton'],
     image: 'badminton-court',
     status: 'Closed',
+    minPlayers: 2,
+    maxPlayers: 4,
   },
   {
     id: '6',
@@ -48,6 +58,8 @@ export const facilities: Facility[] = [
     sports: ['Workout', 'Fitness'],
     image: 'gymnasium',
     status: 'Available',
+    minPlayers: 1,
+    maxPlayers: 1,
   },
   {
     id: '7',
@@ -56,6 +68,8 @@ export const facilities: Facility[] = [
     sports: ['Volleyball'],
     image: 'volleyball-court',
     status: 'Available',
+    minPlayers: 6,
+    maxPlayers: 12,
   },
    {
     id: '8',
@@ -64,5 +78,9 @@ export const facilities: Facility[] = [
     sports: ['Table Tennis'],
     image: 'table-tennis',
     status: 'Available',
+    minPlayers: 2,
+    maxPlayers: 4,
   }
 ];
+
+export const sportsList = Array.from(new Set(facilities.flatMap(f => f.sports)));

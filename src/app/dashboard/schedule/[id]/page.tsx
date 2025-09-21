@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from 'react';
@@ -9,12 +10,13 @@ import { facilities } from '@/lib/data';
 import type { Facility, Booking } from '@/lib/types';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
 import { add, format, startOfDay, endOfDay, setHours } from 'date-fns';
-import { Clock, User } from 'lucide-react';
+import { Clock, User, PlusCircle } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Terminal } from "lucide-react"
+import { useDashboard } from '@/app/dashboard/layout';
+import { Button } from '@/components/ui/button';
 
 export default function SchedulePage() {
   const params = useParams();
@@ -24,6 +26,7 @@ export default function SchedulePage() {
   const [bookings, setBookings] = useState<Booking[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { openBookingSheet } = useDashboard();
 
   useEffect(() => {
     const facilityData = facilities.find((f) => f.id === id) || null;
@@ -118,13 +121,16 @@ export default function SchedulePage() {
                     <p className="text-sm text-muted-foreground">{format(add(slot, { hours: 1 }), 'h a')}</p>
                   </div>
                   <div className={`flex-1 p-4 rounded-md ${
-                      isAvailable ? 'bg-green-100 dark:bg-green-900/50' : 
+                      isAvailable ? 'bg-green-100/50 dark:bg-green-900/20' : 
                       status === 'confirmed' ? 'bg-primary/20' : 'bg-accent/20'
                   }`}>
                     {isAvailable ? (
                        <div className="flex justify-between items-center">
                          <p className="font-semibold text-green-800 dark:text-green-300">Available</p>
-                         <Badge variant="outline">Book Now</Badge>
+                         <Button size="sm" variant="outline" onClick={() => openBookingSheet({ facilityId: facility.id, startTime: slot })}>
+                            <PlusCircle className="h-4 w-4 mr-2" />
+                            Book Now
+                         </Button>
                        </div>
                     ) : (
                       <div className='flex items-start gap-4'>
@@ -175,3 +181,5 @@ function ScheduleSkeleton() {
       </div>
     );
   }
+
+    
