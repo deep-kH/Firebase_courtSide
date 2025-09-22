@@ -44,7 +44,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     setInitialBookingData(data);
     setIsBookingSheetOpen(true);
   };
-  
+
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -61,12 +61,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <div className="hidden border-r bg-muted/40 md:block w-64">
           <div className="flex h-full max-h-screen flex-col gap-2">
             <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
-               <Skeleton className="h-6 w-32" />
+              <Skeleton className="h-6 w-32" />
             </div>
             <div className="flex-1 p-4">
               <div className="space-y-2">
-                 <Skeleton className="h-8 w-full" />
-                 <Skeleton className="h-8 w-full" />
+                <Skeleton className="h-8 w-full" />
+                <Skeleton className="h-8 w-full" />
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
             <Skeleton className="h-8 w-8 md:hidden" />
             <div className="w-full flex-1">
-               <Skeleton className="h-8 w-64" />
+              <Skeleton className="h-8 w-64" />
             </div>
             <Skeleton className="h-10 w-10 rounded-full" />
           </header>
@@ -83,7 +83,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             <div className="flex items-center">
               <Skeleton className="h-9 w-48" />
             </div>
-             <Skeleton className="w-full h-[60vh] rounded-xl" />
+            <Skeleton className="w-full h-[60vh] rounded-xl" />
           </main>
         </div>
       </div>
@@ -97,7 +97,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           <div className="flex h-full max-h-screen flex-col gap-2">
             <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
               <Link href="/dashboard" className="flex items-center gap-2 font-semibold">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-primary"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.84l8.57 3.92a2 2 0 0 0 1.66 0l8.57-3.92a1 1 0 0 0 0-1.84Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-primary"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.84l8.57 3.92a2 2 0 0 0 1.66 0l8.57-3.92a1 1 0 0 0 0-1.84Z" /><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" /><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" /></svg>
                 <span className="">CET Court Connect</span>
               </Link>
             </div>
@@ -120,7 +120,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <SheetContent side="left" className="flex flex-col">
                 <nav className="grid gap-2 text-lg font-medium">
                   <Link href="#" className="flex items-center gap-2 text-lg font-semibold mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-primary"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.84l8.57 3.92a2 2 0 0 0 1.66 0l8.57-3.92a1 1 0 0 0 0-1.84Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-primary"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.84l8.57 3.92a2 2 0 0 0 1.66 0l8.57-3.92a1 1 0 0 0 0-1.84Z" /><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" /><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" /></svg>
                     <span>CET Court Connect</span>
                   </Link>
                   <DashboardNav />
@@ -137,11 +137,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             <UserNav />
           </header>
           <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6 bg-background">
-              {children}
+            {children}
           </main>
         </div>
       </div>
-      <BookingSheet 
+      <BookingSheet
         isOpen={isBookingSheetOpen}
         onOpenChange={setIsBookingSheetOpen}
         initialData={initialBookingData}
@@ -150,4 +150,3 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   );
 }
 
-    

@@ -71,7 +71,7 @@ export const facilities: Facility[] = [
     minPlayers: 6,
     maxPlayers: 12,
   },
-   {
+  {
     id: '8',
     name: 'Table Tennis Hall',
     type: 'Indoor',
@@ -80,6 +80,16 @@ export const facilities: Facility[] = [
     status: 'Available',
     minPlayers: 2,
     maxPlayers: 4,
+  },
+  {
+    id: '9',
+    name: 'Cricket Pitch',
+    type: 'Outdoor',
+    sports: ['Cricket'],
+    image: 'cricket-pitch',
+    status: 'Maintenance',
+    minPlayers: 11,
+    maxPlayers: 22,
   }
 ];
 
