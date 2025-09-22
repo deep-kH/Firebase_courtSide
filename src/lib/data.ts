@@ -65,7 +65,7 @@ export const facilities: Facility[] = [
     id: '7',
     name: 'Volleyball Court',
     type: 'Outdoor',
-    sports: ['Volleyball'],
+    sports: ['Volleyball','something'],
     image: 'volleyball-court',
     status: 'Available',
     minPlayers: 6,

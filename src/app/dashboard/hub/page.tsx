@@ -22,6 +22,8 @@ export default function InterestHubPage() {
     const sports = new Set(facilities.flatMap(f => f.sports));
     return Array.from(sports);
   }, []);
+  console.log('availableSports', availableSports.filter(s => !s || s === ""));
+
 
   useEffect(() => {
     const q = query(collection(db, 'interestHubPosts'), orderBy('createdAt', 'desc'));
