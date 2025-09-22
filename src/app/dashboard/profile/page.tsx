@@ -22,18 +22,18 @@ export default function ProfilePage() {
   const handleProfileUpdate = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!user || !displayName || displayName === user.displayName) {
-        return;
+      return;
     }
-    
+
     setIsLoading(true);
 
     try {
-      if(auth.currentUser) {
+      if (auth.currentUser) {
         await updateProfile(auth.currentUser, { displayName });
       } else {
         throw new Error("User not found");
       }
-      
+
       const userDocRef = doc(db, 'users', user.uid);
       await updateDoc(userDocRef, { displayName });
 
@@ -43,13 +43,13 @@ export default function ProfilePage() {
       });
 
     } catch (error: any) {
-        toast({
-            title: "Update Failed",
-            description: error.message,
-            variant: "destructive",
-        })
+      toast({
+        title: "Update Failed",
+        description: error.message,
+        variant: "destructive",
+      })
     } finally {
-        setIsLoading(false);
+      setIsLoading(false);
     }
   };
 
@@ -57,14 +57,14 @@ export default function ProfilePage() {
     if (!name) return '';
     const nameParts = name.split(' ');
     if (nameParts.length > 1) {
-        return `${nameParts[0][0]}${nameParts[nameParts.length - 1][0]}`.toUpperCase();
+      return `${nameParts[0][0]}${nameParts[nameParts.length - 1][0]}`.toUpperCase();
     }
     return name.substring(0, 2).toUpperCase();
   }
 
   return (
     <div className="space-y-6">
-       <div>
+      <div>
         <h1 className="text-2xl font-bold tracking-tight font-headline">My Profile</h1>
         <p className="text-muted-foreground">Manage your account settings and personal information.</p>
       </div>
@@ -72,14 +72,14 @@ export default function ProfilePage() {
         <CardHeader>
           <div className="flex items-center space-x-4">
             <Avatar className="h-20 w-20">
-                <AvatarImage src={user?.photoURL || undefined} alt={user?.displayName || 'User'} />
-                <AvatarFallback className="text-3xl bg-primary/20 text-primary font-semibold">
-                    {user?.photoURL ? <UserIcon /> : getInitials(user?.displayName)}
-                </AvatarFallback>
+              <AvatarImage src={user?.photoURL || undefined} alt={user?.displayName || 'User'} />
+              <AvatarFallback className="text-3xl bg-primary/20 text-primary font-semibold">
+                {user?.photoURL ? <UserIcon /> : getInitials(user?.displayName)}
+              </AvatarFallback>
             </Avatar>
             <div>
-                <CardTitle className="text-2xl font-headline">{user?.displayName}</CardTitle>
-                <CardDescription>{user?.email}</CardDescription>
+              <CardTitle className="text-2xl font-headline">{user?.displayName}</CardTitle>
+              <CardDescription>{user?.email}</CardDescription>
             </div>
           </div>
         </CardHeader>
@@ -95,8 +95,8 @@ export default function ProfilePage() {
                 disabled={isLoading}
               />
             </div>
-             <Button type="submit" disabled={isLoading || displayName === user?.displayName}>
-                {isLoading ? 'Saving...' : 'Save Changes'}
+            <Button type="submit" disabled={isLoading || displayName === user?.displayName}>
+              {isLoading ? 'Saving...' : 'Save Changes'}
             </Button>
           </form>
         </CardContent>
