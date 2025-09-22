@@ -121,6 +121,7 @@ export function BookingSheet({ isOpen, onOpenChange, initialData }: BookingSheet
 
   useEffect(() => {
     const facility = facilities.find(f => f.id === selectedFacilityId) || null;
+
     setSelectedFacility(facility);
     const isMultiplayer = facility ? facility.minPlayers > 1 : false;
     setIsMultiplayerGame(isMultiplayer);
@@ -294,6 +295,7 @@ export function BookingSheet({ isOpen, onOpenChange, initialData }: BookingSheet
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
+
                       {facilities.filter(f => f.status === 'Available').map(facility => (
                         <SelectItem key={facility.id} value={facility.id}>{facility.name}</SelectItem>
                       ))}
@@ -374,7 +376,7 @@ export function BookingSheet({ isOpen, onOpenChange, initialData }: BookingSheet
                         </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                        <SelectItem value="">Book as individual</SelectItem>
+                        <SelectItem value="a">Book as individual</SelectItem>
                         {relevantTeams.map(team => (
                             <SelectItem key={team.id} value={team.id}>{team.name}</SelectItem>
                         ))}
